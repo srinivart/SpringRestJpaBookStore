@@ -1,0 +1,111 @@
+/*
+ * 
+http://localhost:8086/bookstore/
+
+
+
+
+
+
+http://localhost:8086/bookstore/add
+{"title":"Be the Best Version Of Yourself","author":"Srinivas","genre":"Self Help","price":250,"year":2030}
+
+
+{
+    "title": "Be the Best Version Of Yourself",
+    "author": "Srinivas",
+    "genre": "Self Help",
+    "price": 250,
+    "year": 2030
+}
+
+
+
+
+http://localhost:8086/bookstore/
+[{"title":"In Search of Lost Time","author":"Marcel Proust","genre":"Novel","price":250.0,"year":1913},{"title":"Ulysses","author":"James Joyce","genre":"Fiction","price":190.0,"year":1904},{"title":"One Hundred Years of Solitude","author":"Gabriel Garcia Marquez","genre":"Novel","price":120.0,"year":1967},{"title":"The Great Gatsby","author":"F. Scott Fitzgerald","genre":"Historical","price":180.0,"year":1925},{"title":"Be the Best Version Of Yourself","author":"Srinivas","genre":"Self Help","price":250.0,"year":2030}]
+
+
+
+
+
+
+http://localhost:8086/bookstore/find/In Search of Lost Time
+{
+    "title": "In Search of Lost Time",
+    "author": "Marcel Proust",
+    "genre": "Novel",
+    "price": 250,
+    "year": 1913
+}
+
+
+
+
+
+http://localhost:8086/bookstore/update/In Search of Lost Time
+
+{
+    "title": "In Search of Lost Time",
+    "author": "Marcel Proust",
+    "genre": "Novel",
+    "price": 280,
+    "year": 1913
+}
+
+
+
+http://localhost:8086/bookstore/delete/The Great Gatsby
+
+[
+    {
+        "title": "In Search of Lost Time",
+        "author": "Marcel Proust",
+        "genre": "Novel",
+        "price": 250,
+        "year": 1913
+    },
+    {
+        "title": "Ulysses",
+        "author": "James Joyce",
+        "genre": "Fiction",
+        "price": 190,
+        "year": 1904
+    },
+    {
+        "title": "One Hundred Years of Solitude",
+        "author": "Gabriel Garcia Marquez",
+        "genre": "Novel",
+        "price": 120,
+        "year": 1967
+    }
+]
+
+
+
+
+
+
+
+
+
+
+Updated methods
+-------
+
+	/*
+	@PutMapping("bookstore/update/{title}")
+	Books updateTitle(@RequestBody Books newTitle, @PathVariable String title) {
+		return booksrepo.findByName(title)
+				.map(book -> {
+			book.setPrice(newTitle.getPrice());
+			booksrepo.save(book);
+		});				
+	}
+	*/
+	
+	
+
+
+ * 
+ */
